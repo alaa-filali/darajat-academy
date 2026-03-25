@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أكاديمية درجات | الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <nav class="bg-white shadow-md px-6 py-4 fixed w-full top-0 z-50" dir="rtl">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="images/logo.png" alt="logo" class="w-10 h-10 object-contain">
+                <h1 class="text-2xl font-bold text-[#1F6F78]">أكاديمية درجات</h1>
+            </div>
+
+            <ul class="hidden md:flex gap-8 text-gray-700 items-center font-medium">
+                <li><a href="#" class="hover:text-[#1F6F78] transition">الرئيسية</a></li>
+                <li><a href="#courses" class="hover:text-[#1F6F78] transition">الدورات</a></li>
+                <li><a href="#pricing" class="hover:text-[#1F6F78] transition">الأسعار</a></li>
+                <li><a href="about.html" class="hover:text-[#1F6F78] transition">من نحن</a></li>
+                <li><a href="#contact" class="hover:text-[#1F6F78] transition text-[#F44336] font-bold">تواصل معنا</a>
+                </li>
+            </ul>
+
+            <button id="menu-btn" class="md:hidden text-[#1F6F78] focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white absolute w-full left-0 top-full shadow-lg border-t p-4 space-y-4 text-center">
+            <a href="#" class="block text-gray-700 font-medium">الرئيسية</a>
+            <a href="#courses" class="block text-gray-700 font-medium">الدورات</a>
+            <a href="#pricing" class="block text-gray-700 font-medium">الأسعار</a>
+            <a href="about.html" class="block text-gray-700 font-medium">من نحن</a>
+            <a href="#contact" class="block bg-[#F44336] text-white py-2 rounded-lg">سجل الآن</a>
+        </div>
+    </nav>
+
+    <section
+        class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 relative overflow-hidden bg-gradient-to-br from-[#1F6F78] to-[#4FB6B0] text-white">
+        <div class="absolute top-20 right-10 w-32 h-32 bg-[#F4A825] opacity-20 rounded-full blur-2xl"></div>
+        <div class="absolute bottom-20 left-10 w-40 h-40 bg-[#F44336] opacity-20 rounded-full blur-2xl"></div>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 leading-relaxed">
+            استثمر في مستقبل ابنك من اليوم
+        </h2>
+        <p class="text-white/90 mb-6 max-w-2xl">
+            نقدم برامج تعليمية حديثة في البرمجة والروبوتيك
+            بطريقة تفاعلية تساعد طفلك على الابتكار.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <span class="bg-white/20 px-4 py-2 rounded-full">💻 برمجة</span>
+            <span class="bg-white/20 px-4 py-2 rounded-full">🤖 روبوتيك</span>
+            <span class="bg-white/20 px-4 py-2 rounded-full">🖨️ طباعة ثلاثية الأبعاد</span>
+            <span class="bg-white/20 px-4 py-2 rounded-full">🇬🇧 لغة إنجليزية</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6">
+
+            <a href="#contact">
+                <button class="bg-[#F44336] text-white font-semibold px-8 py-3 rounded-lg
+        hover:bg-[#d7382f] transition shadow-lg">
+                    سجل ابنك الآن
+                </button>
+            </a>
+
+            <a href="#courses">
+                <button class="border-2 border-white text-white font-semibold px-8 py-3 rounded-lg
+        hover:bg-white hover:text-[#1F6F78] transition">
+                    اكتشف البرامج
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section id="courses" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl sm:text-5xl font-bold text-[#1F6F78] mb-4">دوراتنا الرئيسية</h3>
+                <div class="w-24 h-1.5 bg-[#F44336] mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-56 bg-gray-200 relative overflow-hidden">
+                        <img src="./images/nawabig.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="برنامج نوابغ">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-[#1F6F78] mb-3">برنامج نوابغ</h4>
+                        <p class="text-gray-600 mb-6">برنامج متكامل لصناعة جيل ذكي ومبدع في البرمجة، الروبوتيك، والإعلام
+                            الآلي.</p>
+                        <a href="nawabig.html"
+                            class="text-[#F44336] font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            تعرف على المزيد ←
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-56 bg-gray-200 relative overflow-hidden">
+                        <img src="./images/webdev.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="تطوير مواقع الويب">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-[#1F6F78] mb-3">تطوير مواقع الويب</h4>
+                        <p class="text-gray-600 mb-6">تعلم بناء المواقع الإلكترونية من الصفر باستخدام أحدث التقنيات
+                            (HTML, CSS, JS).</p>
+                        <a href="webdev.html"
+                            class="text-[#F44336] font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            تعرف على المزيد ←
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-56 bg-gray-200 relative overflow-hidden">
+                        <img src="./images/computers.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="أساسيات الكمبيوتر">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-[#1F6F78] mb-3">أساسيات الكمبيوتر</h4>
+                        <p class="text-gray-600 mb-6">التكوين الشامل في التقنيات المكتبية (Office) وإدارة نظام التشغيل
+                            باحترافية.</p>
+                        <a href="computer.html"
+                            class="text-[#F44336] font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            تعرف على المزيد ←
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-bold text-[#1F6F78] mb-16">خطط الأسعار والاشتراك</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 transition-transform hover:scale-105">
+                    <h4 class="text-2xl font-bold text-[#1F6F78] mb-4">أساسيات الكمبيوتر</h4>
+                    <div class="text-4xl font-extrabold mb-6">7,500 <span
+                            class="text-sm font-normal text-gray-500">دج/شهر</span></div>
+                    <ul class="text-right space-y-4 mb-10 text-gray-600">
+                        <li class="flex items-center gap-2">✔️ إتقان حزمة Office كاملة</li>
+                        <li class="flex items-center gap-2">✔️ إدارة نظام التشغيل Windows</li>
+                        <li class="flex items-center gap-2">✔️ مهارات البحث والإنترنت</li>
+                        <li class="flex items-center gap-2">✔️ تطبيق عملي 100%</li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full border-2 border-[#1F6F78] text-[#1F6F78] hover:bg-[#1F6F78] hover:text-white py-4 rounded-xl font-bold transition-colors">اشترك
+                        الآن</a>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#4FB6B0] relative transform md:scale-110 z-10">
+                    <div
+                        class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#F44336] text-white px-6 py-1 rounded-full text-sm font-bold">
+                        الأكثر طلباً</div>
+                    <h4 class="text-2xl font-bold text-[#1F6F78] mb-4">برنامج نوابغ</h4>
+                    <div class="text-4xl font-extrabold mb-6">7,500 <span
+                            class="text-sm font-normal text-gray-500">دج/شهر</span></div>
+                    <ul class="text-right space-y-4 mb-10 text-gray-600">
+                        <li class="flex items-center gap-2">✔️ حصة أسبوعية (3 ساعات)</li>
+                        <li class="flex items-center gap-2">✔️ حقيبة أدوات الروبوتيك</li>
+                        <li class="flex items-center gap-2">✔️ دعم فني مستمر</li>
+                        <li class="flex items-center gap-2 text-green-600 font-bold">✔️ خصم 25,000 دج للدفع السنوي</li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full bg-[#F44336] text-white py-4 rounded-xl font-bold shadow-lg hover:bg-[#d7382f] transition-colors">اشترك
+                        الآن</a>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 transition-transform hover:scale-105">
+                    <h4 class="text-2xl font-bold text-[#1F6F78] mb-4">تطوير المواقع</h4>
+                    <div class="text-4xl font-extrabold mb-6">7,500 <span
+                            class="text-sm font-normal text-gray-500">دج/شهر</span></div>
+                    <ul class="text-right space-y-4 mb-10 text-gray-600">
+                        <li class="flex items-center gap-2">✔️ أساسيات HTML</li>
+                        <li class="flex items-center gap-2">✔️ جماليات CSS</li>
+                        <li class="flex items-center gap-2">✔️ لغة Javascript</li>
+                        <li class="flex items-center gap-2">✔️ بناء مشاريع حقيقية</li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full border-2 border-[#1F6F78] text-[#1F6F78] hover:bg-[#1F6F78] hover:text-white py-4 rounded-xl font-bold transition-colors">اشترك
+                        الآن</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold text-center text-[#1F6F78] mb-12">الأسئلة الشائعة</h3>
+            <div class="space-y-4">
+                <div class="faq-item border border-gray-200 rounded-2xl p-4 cursor-pointer hover:bg-gray-50 transition"
+                    onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center font-bold text-[#1F6F78]">
+                        <span>هل يحتاج الطفل لإحضار حاسوبه الشخصي؟</span>
+                        <span class="faq-icon transition-transform">▼</span>
+                    </div>
+                    <div class="faq-answer text-gray-600 mt-3">نحن نوفر جميع الأجهزة والأدوات اللازمة داخل الأكاديمية،
+                        ولكن يفضل إحضار الحاسوب إذا أراد الطفل متابعة مشاريعه في البيت.</div>
+                </div>
+                <div class="faq-item border border-gray-200 rounded-2xl p-4 cursor-pointer hover:bg-gray-50 transition"
+                    onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center font-bold text-[#1F6F78]">
+                        <span>أين يقع مقر الأكاديمية؟</span>
+                        <span class="faq-icon transition-transform">▼</span>
+                    </div>
+                    <div class="faq-answer text-gray-600 mt-3">
+                        حي بن سونة (لاسيتي) طريق القنطرة الجديدة, Chlef, Algeria
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 bg-[#1F6F78] text-white">
+        <div class="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-[3rem] p-12 md:p-16">
+
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black mb-4">تواصل معنا</h3>
+                <div class="w-16 h-1 bg-[#4FB6B0] mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
+
+                <div class="flex items-start gap-5">
+                    <img src="./images/whatsapp.png" alt="واتساب" class="w-10 h-10 flex-shrink-0">
+                    <div>
+                        <h4 class="text-[#4FB6B0] text-xs font-bold uppercase tracking-widest mb-3">اتصال و واتساب</h4>
+                        <a href="https://wa.me/213770808330" target="_blank"
+                            class="block text-xl font-bold hover:text-[#4FB6B0] transition mb-1" dir="ltr">+213 770 80
+                            83 30</a>
+                        <a href="https://wa.me/213668958974" target="_blank"
+                            class="block text-xl font-bold hover:text-[#4FB6B0] transition" dir="ltr">+213 668 95 89
+                            74</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <span class="text-3xl flex-shrink-0">📍</span>
+                    <div>
+                        <h4 class="text-[#4FB6B0] text-xs font-bold uppercase tracking-widest mb-3">المقر</h4>
+                        <a href="https://maps.google.com" target="_blank"
+                            class="block text-lg font-bold hover:text-[#4FB6B0] transition leading-relaxed">
+                            حي بن سونة (لاسيتي)<br>
+                            طريق القنطرة الجديدة، الشلف
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="flex flex-col gap-3 flex-shrink-0">
+                        <img src="./images/facebook.png" alt="فيسبوك" class="w-8 h-8">
+                        <img src="./images/instagram.png" alt="انستغرام" class="w-8 h-8">
+                    </div>
+                    <div>
+                        <h4 class="text-[#4FB6B0] text-xs font-bold uppercase tracking-widest mb-3">تابعنا اجتماعياً
+                        </h4>
+                        <a href="https://facebook.com/daradjat.academy" target="_blank"
+                            class="block text-lg font-bold hover:text-[#4FB6B0] transition mb-2">Daradjat Academy</a>
+                        <a href="https://instagram.com/daradjat.academy" target="_blank"
+                            class="block text-lg font-bold hover:text-[#4FB6B0] transition">@daradjat.academy</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <span class="text-3xl flex-shrink-0">✉️</span>
+                    <div>
+                        <h4 class="text-[#4FB6B0] text-xs font-bold uppercase tracking-widest mb-3">البريد وأوقات العمل
+                        </h4>
+                        <a href="mailto:daradjat.academy@gmail.com"
+                            class="block text-base font-bold hover:text-[#4FB6B0] transition mb-2 break-all">daradjat.academy@gmail.com</a>
+                        <p class="text-white/50 text-sm italic">كل أيام الأسبوع | 08:00 - 17:00</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-gray-100 text-gray-500">
+        <p>© 2026 أكاديمية درجات. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
